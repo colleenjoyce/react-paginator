@@ -1,0 +1,58 @@
+{
+  "name": "react-paginator",
+  "version": "0.0.1",
+  "description": "A Paginator Component for Reactjs",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "jsxhint --reporter node_modules/jshint-stylish/stylish.js index.js test.js",
+    "test": "mocha -R spec test.js",
+    "standalone": "browserify -s index.js --debug > paginator.js",
+    "watch": "watchify examples/main.js -o examples/bundle.js -v --debug",
+    "demo": "browserify examples/main.js --debug > examples/bundle.js"
+  },
+  "browserify": {
+    "transform": [["reactify"]]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landau/react-paginator.git"
+  },
+  "keywords": [
+    "react",
+    "paginate",
+    "pagination",
+    "browserify",
+    "bootstrap"
+  ],
+  "author": {
+    "name": "Trevor Landau",
+    "email": "landautrevor@gmail.com",
+    "url": "http://trevorlandau.net"
+  },
+  "contributors": [
+    {
+      "name": "Trevor Landau",
+      "email": "landautrevor@gmail.com",
+      "url": "http://trevorlandau.net"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/landau/react-paginator/issues"
+  },
+  "homepage": "https://github.com/landau/react-paginator",
+  "dependencies": {
+    "react": "^0.10.0"
+  },
+  "devDependencies": {
+    "browserify": "^4.1.10",
+    "envify": "^1.2.1",
+    "jshint-stylish": "^0.2.0",
+    "jsxhint": "^0.4.10",
+    "mocha": "^1.20.1",
+    "node-jsx": "^0.10.0",
+    "react-addons": "^0.9.0",
+    "reactify": "^0.13.1",
+    "watchify": "^0.10.2"
+  }
+}
