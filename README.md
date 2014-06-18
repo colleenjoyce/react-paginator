@@ -19,5 +19,6 @@ A Paginator Component for Reactjs
 ```js
 var Paginator = require('react-paginator');
 
-<Paginator maxPages="5" numPages="10" />
+// onPaginate will receive a page number
+<Paginator maxPages="5" numPages="10" onClick={this.onPaginate}/>
 ```
