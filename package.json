@@ -1,6 +1,6 @@
 {
   "name": "react-paginator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Paginator Component for Reactjs",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,11 @@
     "demo": "browserify examples/main.js --debug > examples/bundle.js"
   },
   "browserify": {
-    "transform": [["reactify"]]
+    "transform": [
+      [
+        "reactify"
+      ]
+    ]
   },
   "repository": {
     "type": "git",
