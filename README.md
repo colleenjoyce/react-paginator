@@ -12,7 +12,7 @@ A Paginator Component for Reactjs
 
 ### [DEMO](http://landau.github.io/react-paginator)
 
-[](https://github.com/colleenjoyce/react-paginator/examples/img.png)
+![example image](https://raw.githubusercontent.com/landau/react-paginator/master/examples/img.png)
 
 ### Usage
 
