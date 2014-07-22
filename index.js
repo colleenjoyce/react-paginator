@@ -96,6 +96,10 @@ module.exports = React.createClass({
     return range(start, start + displayCount);
   },
 
+  preventDefault: function(e) {
+    e.preventDefault();
+  },
+
 	render: function() {
     var page = this.state.page;
 		var prevClassName = page === 1 ? 'disabled' : '';
@@ -104,11 +108,11 @@ module.exports = React.createClass({
     return (
       <ul className='pagination'>
         <li className={prevClassName} onClick={this.onClick.bind(this, page - 1)}>
-          <a href='#'><i className='glyphicon glyphicon-chevron-left' /></a>
+          <a href='#' onClick={this.preventDefault}><i className='glyphicon glyphicon-chevron-left' /></a>
         </li>
         {this.getPageRange().map(this.renderPage, this)}
         <li className={nextClassName} onClick={this.onClick.bind(this, page + 1)}>
-          <a href='#'><i className='glyphicon glyphicon-chevron-right' /></a>
+          <a href='#' onClick={this.preventDefault}><i className='glyphicon glyphicon-chevron-right' /></a>
         </li>
       </ul>
     );
@@ -118,7 +122,7 @@ module.exports = React.createClass({
     var cls = this.state.page === n ? 'active' : '';
     return (
       <li key={i} className={cls} onClick={this.onClick.bind(this, n)}>
-        <a href='#'>{n}</a>
+        <a href='#' onClick={this.preventDefault}>{n}</a>
       </li>
     );
   }
